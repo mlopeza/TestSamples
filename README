@@ -1,0 +1,19 @@
+To create a VirtualEnv you can use the prepare.sh bash script.
+If you don't want to use it, you will need Python2.7 and the requirements.txt.
+you can do this by executing:
+	pip install -r requirements.txt
+
+Note:
+	If you have multiple versions of python, you might need to install the requirements with pip2 instead of pip
+
+
+Once you have sourced the VirtualEnv, verify that the execute script has u+x permissions
+
+To execute:
+./execute.py --help
+./execute.py --server-url localhost --server-port 8080 -o results
+
+With this last command you will execute all the tests inside the tests folder (Actually all the tests located in the project, but we only have tests in that folder.)
+The xml results will be in the results folder and if any of the tests fail the StackTraces will be shown in the terminal.
+
+As of today these tests take around 30 seconds to finish because of the concurrent game creation test.
